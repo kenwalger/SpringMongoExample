@@ -12,9 +12,8 @@ import java.util.List;
  * Created by Ken on 1/23/2016.
  */
 
-@Document(collection="person")
-public class Person
-{
+@Document(collection = "person")
+public class Person {
 
     @Id
     private Long personId;
@@ -23,67 +22,57 @@ public class Person
 
     private int age;
 
-    @DBRef(db="address")
+    @DBRef(db = "address")
     private List<Address> addresses = new ArrayList<>();
 
-    public Person()
-    {}
+    public Person() {
+    }
 
 
     @PersistenceConstructor
-    public Person(Long personId, String name, int age)
-    {
+    public Person(Long personId, String name, int age) {
         super();
         this.personId = personId;
         this.name = name;
         this.age = age;
     }
 
-    public Long getPersonId()
-    {
+    public Long getPersonId() {
         return personId;
     }
 
-    public void setPersonId(Long personId)
-    {
+    public void setPersonId(Long personId) {
         this.personId = personId;
     }
 
-    public String getName()
-    {
+    public String getName() {
         return name;
     }
 
-    public void setName(String name)
-    {
+    public void setName(String name) {
         this.name = name;
     }
 
-    public int getAge()
-    {
+    public int getAge() {
         return age;
     }
 
-    public void setAge(int age)
-    {
+    public void setAge(int age) {
         this.age = age;
     }
 
-    public List<Address> getAddresses()
-    {
+    public List<Address> getAddresses() {
         return addresses;
     }
 
 
-    public void setAddresses(List<Address> addresses)
-    {
+    public void setAddresses(List<Address> addresses) {
         this.addresses = addresses;
     }
 
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return "Person [personId=" + personId
                 + ", name=" + name
                 + ", age=" + age

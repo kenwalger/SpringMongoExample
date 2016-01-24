@@ -8,9 +8,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
  * Created by Ken on 1/23/2016.
  */
 
-@Document(collection="address")
-public class Address
-{
+@Document(collection = "address")
+public class Address {
 
     @Id
     private long addressId;
@@ -20,15 +19,13 @@ public class Address
     private String state;
     private long zipcode;
 
-    public Address()
-    {
+    public Address() {
 
         System.out.println("CAlling default cons");
     }
 
     @PersistenceConstructor
-    public Address(long addressId, String address, String city, String state, long zipcode)
-    {
+    public Address(long addressId, String address, String city, String state, long zipcode) {
         super();
         this.addressId = addressId;
         this.address = address;
@@ -38,49 +35,40 @@ public class Address
     }
 
 
-    public String getAddress()
-    {
+    public String getAddress() {
         return address;
     }
 
-    public void setAddress(String address)
-    {
+    public void setAddress(String address) {
         this.address = address;
     }
 
-    public String getCity()
-    {
+    public String getCity() {
         return city;
     }
 
-    public void setCity(String city)
-    {
+    public void setCity(String city) {
         this.city = city;
     }
 
-    public String getState()
-    {
+    public String getState() {
         return state;
     }
 
-    public void setState(String state)
-    {
+    public void setState(String state) {
         this.state = state;
     }
 
-    public long getZipcode()
-    {
+    public long getZipcode() {
         return zipcode;
     }
 
-    public void setZipcode(long zipcode)
-    {
+    public void setZipcode(long zipcode) {
         this.zipcode = zipcode;
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return "Address [address=" + address + ", city=" + city + ", state=" + state + ", zipcode=" + zipcode + "]";
     }
 }

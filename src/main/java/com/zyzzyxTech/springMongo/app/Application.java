@@ -4,7 +4,6 @@ import com.zyzzyxTech.springMongo.entities.Address;
 import com.zyzzyxTech.springMongo.entities.Person;
 import com.zyzzyxTech.springMongo.repositories.AddressRepo;
 import com.zyzzyxTech.springMongo.repositories.PersonRepo;
-
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.ClassPathResource;
 
